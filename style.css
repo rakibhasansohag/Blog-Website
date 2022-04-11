@@ -735,11 +735,12 @@ footer .wrapper {
 
 
 	.blog .wrapper {
-		width: 56px;
-		height: 56px;
-		background-color: var(--action-primary);
+		/* width: 56px; */
+		display: flex;
+		/* height: 56px; */
+		/* background-color: var(--action-primary); */
 		padding: 3px;
-		border-radius: 50%;
+		/* border-radius: 50%; */
 	}
 
 	.profile-wrapper img {
