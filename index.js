@@ -1,4 +1,4 @@
-// firs part of javascript start
+// first part of javascript start
 
 'use strict';
 
