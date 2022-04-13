@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-3.png" alt="Fast web page loading on a $20 feature phone" />
+          </div>
+
+          <h2 style="font-size: 2.4rem; margin-bottom: 4rem">
+            Accessibility tips for web developers
+          </h2>
+          <div class="blog_post">
+            <p class="margin_bottom">
+              <b>Tip: It's awesome to build sites that are inclusive and
+                accessible to everyone. There are at least six key areas of
+                disability you can optimize for:
+                <b style="color: black; font-weight: 800">
+                  visual, hearing, mobility, cognition, speech, and neural </b>. Many tools and resources can help here,
+                even if you're
+                totally new to web accessibility.</b>
+            </p>
+
+            <p class="margin_bottom">
+              To be accessible, sites need to work across multiple devices
+              with varying screen sizes and different kinds of input, such as
+              screen readers. Moreover, sites should be usable by the broadest
+              group of users, including those with disabilities. Here's a
+              sample of just a few disabilities your users may have:<br />
+            </p>
+
+            <ul class="margin_bottom">
+              <li>
+                Ensure text content meets a minimum contrast ratio threshold.
+              </li>
+              <li>
+                Avoid communicating information using solely color and ensure
+                that all text is resizable.
+              </li>
+              <li>
+                Ensure all user interface components can be used with
+                assistive technologies such as screen readers, magnifiers, and
+                braille displays. This entails ensuring that UI components are
+                marked up such that accessibility APIs can programmatically
+                determine the role, state, value, and title of any element.
+              </li>
+            </ul>
+
+            <a href="https://en.wikipedia.org/wiki/accessibility">
+              <button class="margin_bottom btn btn-primary" style="text-transform: uppercase">
+                learn more about accessibility
+              </button></a>
+
+            <p class="margin_bottom">
+              <b style="font-weight: 800"> Tip </b>: The element inspection
+              feature in the Chrome, Edge, and Firefox developer tools
+              displays a tooltip of CSS properties that includes a quick check
+              for color contrast ratio.
+            </p>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022 <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

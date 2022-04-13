@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-6.png" alt="DataBase" />
+          </div>
+
+          <h2 style="font-size: var(--fs-1); margin-bottom: 4rem">
+            Don't Develop Just for Yourself - A Developer's Checklist to
+            Accessibility
+          </h2>
+          <div class="blog_post">
+            <p class="margin_bottom">
+              We, as developers, tend to develop sites unconsciously for
+              people like ourselves. If we don't actively pay attention, the
+              sites are often accessible only for certain types of people:
+              Sighted mouse-users, who have good fine motor skills and are
+              good at using computers.
+            </p>
+            <br />
+
+            <p class="margin_bottom">
+              It leads to moments where no one who navigates the web with only
+              a keyboard (or keyboard simulating device) can access and
+              interact with the site. It is a pretty big group of people!
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/Personal_computer">
+              <button class="margin_bottom btn btn-primary" style="text-transform: uppercase">
+                learn more about Checklist personal computers
+              </button></a>
+
+            <p class="margin_bottom">
+              We have a responsibility to make sites that work for all of our
+              users. In some cases, it is required by law, but it is not the
+              only reason we should care.
+            </p>
+
+            <p class="margin_bottom">
+              This blog post is aimed for those at the beginning of their
+              accessibility journey. You might know some things, like "always
+              provide an alt-text for an image," but are unsure what to write
+              there. Or you don't have any idea how to know if your site is
+              accessible at all.
+            </p>
+
+            <p class="margin_bottom">
+              Following this blog post won't make your site 100% accessible!
+              The goal of this post is to provide some information about some
+              things to check manually after using some automated testing.
+            </p>
+
+            <h3 class="margin_bottom" style="border-bottom: 13px solid pink; display: inline-block">
+              Keyboard Navigation
+            </h3>
+
+            <p class="margin_bottom">
+              First of all, abandon your mouse for a second. Don't use it. Try
+              to navigate through the website using only the keyboard. Try to
+              complete every task user needs to be able to complete on the
+              website. Can you do it? Can you see where you are at the moment?
+              Is the focus indicator (yes, that thing many designers and
+              developers like to remove) visible enough?
+            </p>
+
+            <p class="margin_bottom">
+              If you can't use the whole website with only a keyboard, that is
+              an accessibility and usability problem. However, one thing to
+              note here is that keyboard interaction is not necessarily
+              accomplished with just tab and enter, as it has been at some
+              point. The general pattern goes, as WAI-ARIA Authoring Practices
+              state:
+            </p>
+
+            <p class="margin_bottom">
+              Another thing to consider in this point is focus indicators.
+              They should be visible, and even if the default focus indicator
+              on the browser is sufficient to pass the WCAG-requirements, it
+              might be hard to see. So I would recommend enhancing the focus
+              indicator to be more visible. Just remember that the color of
+              the indicator should have a sufficient contrast ratio with the
+              adjacent background.
+            </p>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022 <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

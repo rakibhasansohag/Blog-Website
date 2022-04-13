@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-9.png" alt="DataBase" />
+          </div>
+
+          <h2 style="font-size: var(--fs-1); margin-bottom: 4rem">
+            The best web accessibility tools for developers in 2021
+          </h2>
+          <div class="blog_post">
+            <p class="margin_bottom">
+              The quality of the tools you use defines the speed with which
+              you can diagnose and resolve problems.
+            </p>
+            <br />
+
+            <p class="margin_bottom">
+              Each year the landscape changes dramatically in web
+              technologies, and of late the tooling for accessibility is no
+              exception. I’ve divided this article into 4 categories -
+              resources, development tools, continuous integration and screen
+              readers.
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/Web_accessibility">
+              <button class="margin_bottom btn btn-primary" style="text-transform: uppercase">
+                learn more about Web Accessibility
+              </button></a>
+
+            <h3 class="margin_bottom">Resources</h3>
+
+            <p class="margin_bottom">
+              These are the pages that I keep bookmarked for reference and to
+              learn new techniques.
+            </p>
+            <ul class="margin_bottom">
+              <li>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">Mozilla Accessibility Docs</a>
+              </li>
+              <li>
+                <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">W3C WCAG Guidelines</a>
+              </li>
+              <li>
+                <a href="https://www.smashingmagazine.com/category/accessibility">Smashing Magazine - Accessibility</a>
+              </li>
+              <li>
+                <a href="https://css-tricks.com/tag/accessibility/">CSS Tricks - Accessibility</a>
+              </li>
+            </ul>
+
+            <p class="margin_bottom">
+              There are a number of great accessibility blogs on the web which
+              I suggest browsing - a good jumping off point is available at
+              Digital A11y.
+            </p>
+
+            <h3 class="margin_bottom">Development tools</h3>
+
+            <ul class="margin_bottom">
+              <li>
+                <a href="https://www.deque.com/axe/">axe &nbsp; </a> - axe has
+                quickly become the defacto standard for automated
+                accessibility testing. Deque's axe-core testing engine
+                provides the under the hood implementation for most common
+                tools, and they also provide a free Chrome extension that
+                quickly identifies any in page errors for most common issues
+                while providing guidance on how to resolve them. Definitely my
+                first port of call when testing any new code.
+              </li>
+
+              <li>
+                <a href="https://github.com/pa11y/pa11y">pa11y &nbsp; </a> -
+                pa11y is an automated testing tool based on axe-core that can
+                be run on your development environment as part of your commit
+                hooks or front-end build pipeline. It's extremely configurable
+                so you can run automated tests for different accessibility
+                standards and viewports, ignoring specific WCAG rule sets as
+                well as triggering actions on pages as a part of your test
+                suite. @f3igao's wonderful blog post, How to automate web
+                accessibility testing is a great starting off point if you are
+                looking to fully integrate pa11y with your front-end build.
+              </li>
+
+              <li>
+                <a href="https://github.com/MSU-NatSci/DomainAccessibilityAudit">DomainAccessibilityAudit &nbsp;
+                </a>
+                - I found this tool while researching ways to test an entire
+                website for a11y issues and this was a perfect fit. You can
+                feed it a root URL to start testing on and it will scrape all
+                links on all subsequent pages and perform an audit,
+                essentially crawling the entire site and producing a report of
+                a11y issues. You can also input a sitemap.xml if you want to
+                test a specific set of pages instead of crawling the entire
+                site
+              </li>
+
+              <li>
+                <a href="https://accessibilityinsights.io/docs/en/web/overview/">Accessibility insights for web &nbsp;
+                </a>
+                - Microsoft's commitment to accessible technologies shines
+                with their free Chrome extension and provides another useful
+                interface to the axe-core framework.
+              </li>
+
+              <li>
+                <a
+                  href="https://chrome.google.com/webstore/detail/siteimprove-accessibility/efcfolpjihicnikpmhnmphjhhpiclljc">Siteimprove
+                  Accessibility Checker &nbsp;
+                </a>
+                - The Siteimprove browser extension provides one of the most
+                comprehensive interfaces to resolving issues with detailed
+                recommendations on how to fix them. Highly recommended to keep
+                in your toolbox.
+              </li>
+
+              <li>
+                <a href="https://developers.google.com/web/tools/lighthouse">Lighthouse &nbsp;
+                </a>
+                - Don't have time or access to install software to run a quick
+                a11y check? Lighthouse comes built in with Chrome DevTools and
+                provides a fast, easy to understand issue checker that
+                integrates perfectly with the Chrome browser. It also offers
+                other suggestions in terms of improving page performance,
+                server configuration and insights into using progressive web
+                applications.
+              </li>
+            </ul>
+
+            <h3 class="margin_bottom">Continuous integration</h3>
+
+            <p class="margin_bottom">
+              Catching issues before they are in production is one of the
+              major benefits of adding accessibility tooling to your CI
+              pipeline. Recently there has been huge progress in the ease of
+              integration and reporting in this space, which I expect will
+              continue to improve over the next year.
+            </p>
+
+            <ul>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">pa11y-ci</a>
+                - A set of command line tools for pa11y, pa11y-ci gives you
+                the opportunity to run your suite of pa11y tests on your CI
+                server.
+              </li>
+              <li>
+                <a href="https://github.com/GoogleChrome/lighthouse-ci" target="_blank"
+                  rel="noopener noreferrer">lighthouse-ci
+                </a>
+                - If you're looking to run a comprehensive set of tests in
+                your CI environment, lighthouse-ci brings all the power of
+                Google's Lighthouse app to the table. In addition to
+                accessibility checks, lighthouse-ci will report on your app's
+                performance, SEO and best practices in one of the most
+                polished standalone reports available.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022 <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-8.png" alt="DataBase" />
+          </div>
+
+          <h2 style="font-size: var(--fs-1); margin-bottom: 4rem">
+            Monitoring Performance with the PageSpeed Insights API
+          </h2>
+          <div class="blog_post">
+            <p class="margin_bottom">
+              PageSpeed Insights is a Google project that has drastically
+              evolved over the past few years. As stated, "PageSpeed Insights
+              (PSI) reports on the performance of a page on both mobile and
+              desktop devices, and provides suggestions on how that page may
+              be improved". It might not be obvious, but this tool does so
+              much more than stated. PageSpeed Insights provides a REST API in
+              addition to the GUI. Now more than ever, we can benefit from PSI
+              in light of Google's announcement to update its search algorithm
+              to prioritize page experience. PSI provides lab data for SEO,
+              performance, accessibility, best practices and PWA via
+              Lighthouse and Web Vitals field metrics from Google's CrUX API.
+            </p>
+            <br />
+
+            <h3 class="margin_bottom">
+              Lighthouse and Web Vitals via PageSpeed Insights API
+            </h3>
+
+            <p class="margin_bottom">
+              Under the hood the PageSpeed Insights API runs Lighthouse for
+              lab data and fetches Web Vitals field data via CrUX API. The
+              response will look something like the below.
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/API">
+              <button class="margin_bottom btn btn-primary" style="text-transform: uppercase">
+                learn more about Api Manipulation
+              </button></a>
+
+            <p class="margin_bottom">
+              lighthouseResult is similar to what you would see in the
+              Lighthouse result payload as lhr. loadingExperience represents
+              metrics of end users' page loading experience while
+              originLoadingExperience represents metrics of the aggregated
+              page loading experience of the origin.
+            </p>
+
+            <h3 class="margin_bottom">
+              Monitoring Page Experience with PageSpeed Insights API
+            </h3>
+
+            <p class="margin_bottom">
+              Foo now uses PageSpeed Insights API as its source for running
+              Lighthouse to monitor website quality and page experience. We
+              can monitor changes in website performance, SEO, accessibility,
+              best practice and PWA as we were previously (with Lighthouse
+              directly). Our motivation for making this change came from
+              challenging intermittent Lighthouse PROTOCOL_TIMEOUT issues
+              affecting paid subscribers and IP blocking. After some time
+              wrestling the problems and attempting to remedy with a more
+              resource intense infrastructure, and a variety of OS flavors -
+              we landed on this solution. We now run Lighthouse via PageSpeed
+              Insights API as the ideal solution but still run Lighthouse
+              directly when URLs require options like extraHeaders. We still
+              experience a low number of timeouts with PSI, but run Lighthouse
+              directly as part of our retry logic and with this new recipe of
+              running Lighthouse - we're now free of issues!
+            </p>
+
+            <p class="margin_bottom">
+              We maintain an NPM package called Lighthouse Persist which
+              extends Lighthouse to provide simple configuration to upload
+              Lighthouse reports to AWS S3. We added an option for utilizing
+              the same package to run Lighthouse via PageSpeed Insights API.
+              The nice part about this is that you can seamlessly run
+              Lighthouse directly or via PSI with the same interface and
+              output. We run Lighthouse Persist in our production environment
+              nearly 10,000 times a day!
+            </p>
+
+            <h3 class="margin_bottom">
+              Benefits of Running Lighthouse via PageSpeed Insights API
+            </h3>
+
+            <p class="margin_bottom">
+              We chose to utilize the PSI API to run Lighthouse as a solution
+              to the issues described above. There are many other benefits
+              that helped us make this decision.
+            </p>
+
+            <ul>
+              <li>
+                Offload resource consumption to Google ! If you haven't
+                noticed Lighthouse memory and CPU consumption is expensive.
+                The PageSpeed Insights API does impose rate limiting however.
+                It seems that you can request an increase in limits, however
+                the UI is a bit limited in this area at the moment. I would
+                expect this to change soon
+              </li>
+              <li>
+                Get consistent results by running Lighthouse in a stable,
+                consistent environment.
+              </li>
+              <li>
+                Get additional data like loadingExperience and
+                originLoadingExperience from the CrUX API (under the hood).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022 <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

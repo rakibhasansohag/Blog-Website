@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-4.png" alt="DataBase" />
+          </div>
+
+          <h2 style="font-size: var(--fs-1); margin-bottom: 4rem">
+            Dynamically Securing Databases using Hashicorp Vault
+          </h2>
+          <div class="blog_post">
+            <h3>Database defined</h3>
+            <p class="margin_bottom">
+              Nowadays, it’s hard to profoundly talk about security in the IT
+              industry, since it has to be considered on so many different
+              levels: from securing code chunks, securing containers, up to
+              securing complex infrastructures and defining strong
+              authorization and authentication policies across the enterprise.
+            </p>
+            <br />
+
+            <p class="margin_bottom">
+              Vault is a tool that let you store secrets, any kind of secret
+              that your company requires to be secured, and also lets you
+              generate them dynamically.
+            </p>
+
+            <a href="https://en.wikipedia.org/wiki/Dynamically">
+              <button class="margin_bottom btn btn-primary" style="text-transform: uppercase">
+                learn more about database
+              </button></a>
+
+            <h3 class="margin_bottom">General Context</h3>
+
+            <p class="margin_bottom">
+              I will explain this with one simple example: let’s suppose that
+              you have to secure a data mart, which contains some databases
+              that are accessed by different microservices, each microservice
+              has access to its own database and also could be scaled up and
+              down dynamically according to the demand. New microservices are
+              deployed every time the number of instances are increased and
+              each instance needs to be provided with the proper
+              configuration.
+            </p>
+
+            <p class="margin_bottom">
+              One important part of the configuration is the database
+              credentials that usually are static values for all instances of
+              the microservice. So there’s not much science in the typical
+              ways that are commonly used to provide the credentials and
+              secrets to each microservice at deployment time:
+            </p>
+
+            <ul class="margin_bottom">
+              <li>
+                Could be provided as environment variables either plain text
+                or encrypted.
+              </li>
+              <li>Could be provided on a config file on each instance</li>
+              <li>
+                Could be provided as configmaps or a secret assuming you
+                handle your orchestration over a Kubernetes environment.
+              </li>
+            </ul>
+
+            <p class="margin_bottom">
+              I could mention some other examples, but handling your database
+              secrets are always kind of a manual process; Think for a while
+              what if for some reason you have to change the user and password
+              of your databases because they were compromised? How about
+              meeting compliance requirements for rotating passwords every 90
+              days for example? What are the implications of changing the
+              credentials?
+            </p>
+
+            <p class="margin_bottom">
+              This simple scenario of securing databases could be extended to
+              some other areas like ssh keys, certificates, tokens,
+              identities, credentials, encryption as service, etc.
+            </p>
+
+            <p class="margin_bottom">
+              If you manage all those in a centralized vault ecosystem, you
+              can take prompt actions without disrupting your operation. You
+              can have all your systems authenticating by themselves without
+              human interaction, that’s the goal of a good implementation of
+              DevSecOps.
+            </p>
+
+            <p class="margin_bottom">
+              So, going back to our database example, you can have all your
+              microservices requesting credentials to vault who dynamically
+              create them for each instance of microservice every time it is
+              deployed, and rotate/revoke them over a well-defined security
+              policy. The following diagram shows how vault implements this:
+            </p>
+
+            <p class="margin_bottom">
+              Before they can start requesting dynamic credentials to the
+              database, each microservice should be authenticated against an
+              internal or external system. Authentication is the process by
+              which each microservice is verified and an identity is assigned
+              to it. Multiple authentication methods are supported.
+            </p>
+
+            <p class="margin_bottom">
+              Once the microservice has been verified, it has to account for
+              access control and permissions associated with such an identity,
+              that’s called authorization. Vault handles authorization by the
+              definition of policies in Vault which control what a user or
+              microservice, in this case, can access. For example:
+            </p>
+
+            <p class="margin_bottom">
+              In order to set this up in a running environment, you have to
+              follow the next simple steps:
+            </p>
+
+            <ol>
+              <li>
+                From the vault side: The admin user has to get authenticated
+                against Vault, then he should enable the database secret and
+                configure the postgres plugin, that requires to create a Role
+                that creates dynamic credentials.
+              </li>
+              <li>
+                From the application side: The application should be provided
+                with a valid Token in order to get authenticated, then,
+                through the API it can dynamically request postgres
+                credentials as shown in the following diagram :
+              </li>
+            </ol>
+
+            <div class="blog_img_post">
+              <img src="images/blog-4.png" alt="DataBase" />
+            </div>
+            <p class="margin_bottom">
+              This is a basic usecase for how Vault can be used for
+              dynamically securing databases, among other much things, in
+              order to provide a more secure deployment of your microservices
+              and databases.
+            </p>
+
+            <p class="margin_bottom"></p>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="https://devoloper-rakib.github.io/Blog-Website/" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022 <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

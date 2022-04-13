@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Website</title>
+
+  <!-- favicon start  -->
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <!-- font awesome start   -->
+  <script src="https://kit.fontawesome.com/df8d6121fb.js" crossorigin="anonymous"></script>
+  <!-- custom css start  -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+  <!-- header part start  -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib logo" width="150" height="40" class="logo-light" />
+
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="40" class="logo-dark" />
+        </a>
+
+        <div class="btn-group">
+          <button class="theme-btn theme-btn-mobile light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+
+          <button class="nav-menu-btn">
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="flex-wrapper">
+          <ul class="desktop-nav">
+            <li><a href="#" class="nav-link">Home</a></li>
+
+            <li><a href="#" class="nav-link">About Me</a></li>
+
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+
+          <button class="theme-btn theme-btn-desktop light">
+            <ion-icon name="moon" class="moon"></ion-icon>
+            <ion-icon name="sunny" class="sun"></ion-icon>
+          </button>
+        </div>
+
+        <div class="mobile-nav">
+          <button class="nav-close-btn">
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="wrapper">
+            <p class="h3 nav-title">Main Menu</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">About Me</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <p class="h3 nav-title">Topics</p>
+
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Database</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Accessibility</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#" class="nav-link">Web Performance</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- header part end -->
+
+  <!-- hero section start  -->
+
+  <main>
+    <!-- blog section start  -->
+
+    <div class="main">
+      <div class="container">
+        <!-- post gate way start -->
+
+        <div class="blog">
+          <div class="blog_img_post">
+            <img src="images/blog-10.png" alt="DataBase" />
+          </div>
+
+          <h2 style="
+								font-size: 2.2rem;
+								margin-bottom: 4rem;
+								font-weight: 800;
+								text-transform: capitalize;
+							">
+            How to connect a React frontend with a NodeJS/Express backend
+          </h2>
+          <div class="blog_post">
+            <h3>NodeJs/Express defined</h3>
+            <p class="margin_bottom">
+              When I first learned to use React, a frontend library for
+              JavaScript, I was hyped. Managing state with React hooks and
+              building nice looking web apps were awesome. However, I didn’t
+              know how to connect that to a Node.js backend. All the tutorials
+              I read and watched had too many unnecessary dependencies and
+              complicated nuances. That’s why in this tutorial, we will be
+              sticking to the bare basics.
+            </p>
+            <br />
+
+            <p class="margin_bottom">
+              I’m going to assume you already know a bit of Node.js and
+              React.js for this tutorial. If not, don’t worry, I’ll explain
+              things as we go. In this tutorial, we will be creating a simple
+              quote generator web app.
+            </p>
+
+            <h3 class="margin_bottom">1. The Folder Setup</h3>
+
+            <p class="margin_bottom">
+              First, create a folder in your working directory for the app.
+              Then, inside that directory, make the folder for my backend in
+              Node.js. I will name mine “backend” for simplicity's sake. Then,
+              install express for handling routes. For getting my quotes, I
+              will use the
+              <a href="https://www.npmjs.com/package/inspirational-quotes" target="_blank"
+                rel="noopener noreferrer">inspirational-quotes</a>
+              npm package.
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="10" placeholder="
+$ mkdir quotes-app
+$ cd quotes-app
+$ mkdir backend
+$ cd backend
+$ npm init -y
+$ npm install express inspirational-quotes"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">Now let’s write some code.</p>
+
+            <h3 class="margin_bottom">2. The Backend</h3>
+
+            <p class="margin_bottom">
+              Create an app.js file and set it up like so:
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="5" placeholder="
+const Quote = require('inspirational-quotes');
+
+console.log(Quote.getQuote());"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              If we run this, we will see that we get a JavaScript object
+              containing two keys: text and author. Let’s finish setting up
+              the rest of our express/Node backend. Instead of printing the
+              JavaScript object to console, I will send it instead when the
+              home route is accessed (like so):
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="17" placeholder="
+
+const express = require('express');
+const Quote = require('inspirational-quotes');
+const app = express();
+app.get('/', function(req, res) {
+  res.send(Quote.getQuote());
+});
+let port = process.env.PORT;
+if(port == null || port == ') {
+ port = 5000;
+}
+app.listen(port, function() {
+ console.log('Server started successfully');
+});"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              Don’t worry about process.env.port for now, those of you who
+              have used Heroku or deployed apps should find that familiar,
+              however. From here, if we navigate over to our localhost, we
+              should find a JSON with what we previously printed to console.
+            </p>
+
+            <p class="margin_bottom">
+              Cool, we’re done with the backend. Wait what, it was that
+              easy??? Yep, we’re really done.
+            </p>
+
+            <h3 class="margin_bottom">3. The Frontend</h3>
+
+            <p class="margin_bottom">
+              Now let’s back out of our current directory, into the outer
+              folder and create our react app. I’m going to call mine
+              “frontend” just for simplicity’s sake, once again. Once that’s
+              done, navigate into the “frontend” directory.
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="5" placeholder="
+$ cd ..
+$ npx create-react-app frontend
+$ cd frontend"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              nside the “src” directory, create a file called ”Quotes.jsx”.
+              Populate it with this code: which just gives a button. For now,
+              this button won’t do anything.
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="19" placeholder="
+
+import React, {useState} from ''react'';
+function Quotes() {
+const [text, setText] = useState('');
+const [author, setAuthor] = useState('');
+return (
+<div>
+<button>
+Generate Quote
+</button>
+<h1>{text}</h1>
+<h3>{'-' + author}</h3>
+</div>
+)
+}
+export default Quotes;"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              Then, in the App.js, import this component and use it. I’ve
+              removed some extra stuff that was auto-generated.
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="18" placeholder="
+
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Quotes from './Quotes';
+function App() {
+return (
+<div className='App'>
+<header className='App-header'>
+<Quotes />
+</header>
+</div>
+);
+}
+export default App;"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              At this point, running the app will simply give you a button and
+              a “-”. The next step is where the magic happens: we will combine
+              the frontend and the backend. Inside your package.json file,
+              insert this line of code under the “private: true”. If you did
+              not use 5000 as your backend port, make it whichever port you
+              chose. However, this port MUST be different than 3000, since
+              that is what our React app uses.
+            </p>
+
+            <p class="margin_bottom">
+              Now, install a dependency called axios. If you aren’t familiar
+              with axios, don’t worry. We’ll write a few lines of code with it
+              and that’s it. Axios just lets us make HTTP requests to our
+              backend, and it works similarly to express.
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="26" placeholder="
+import React, {useState} from ''react'';
+import axios from ''axios'';
+function Quotes() {
+const [text, setText] = useState('');
+const [author, setAuthor] = useState('');
+function getQuote() {
+axios.get(''http://localhost:5000/'',  { crossdomain: true }).then(response => {
+setText(response.data.text);
+setAuthor(response.data.author);
+});
+
+return (
+<div>
+<button onClick={getQuote}>
+ Generate Quote
+</button>
+<h1>{text}</h1>
+<h3>{''-'' + author}</h3>
+</div>
+)
+}
+export default Quotes;"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              At this point, when the button is clicked, it triggers our
+              function “getQuote”, which then uses axios to get the
+              information we wanted at route “/” . The information we want,
+              our JavaScript object, is given to us with response.data, so if
+              you printed it to console it would look identical to what we
+              printed in the beginning of this tutorial. Note: if you run your
+              React app and the button is not doing anything, add this code to
+              your backend app.js right above the app.get(“/”):
+            </p>
+
+            <div class="text_area">
+              <form>
+                <textarea name="" id="" cols="30" rows="8" placeholder="
+app.use(function(req, res, next) {
+res.header('Access-Control-Allow-Origin', '*');
+res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+next();
+});"></textarea>
+              </form>
+            </div>
+
+            <p class="margin_bottom">
+              Sometimes axios gets blocked by CORS, so we need to bypass this
+              using the above code.
+            </p>
+
+            <p class="margin_bottom">
+              Note: to deploy this app, you should deploy the backend
+              separately. Then, use that link and replace the localhost link
+              when using Axios. The frontend should then be deployed
+              separately as well. You can do this easily with Github pages.
+            </p>
+
+            <p class="margin_bottom" style="font-weight: 800">
+              <i>If this helped, please give me a clap! If you guys want to
+                help me learn more , let me know in the comments. :)</i>
+            </p>
+          </div>
+        </div>
+
+        <!-- post gate way end -->
+
+        <!-- aside part start  -->
+
+        <div class="aside">
+          <div class="topics">
+            <h2 class="h2">Topics</h2>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+
+              <p>DataBase</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="accessibility-outline"></ion-icon>
+              </div>
+              <p>Accessibility</p>
+            </a>
+
+            <a href="#" class="topic-btn">
+              <div class="icon-box">
+                <ion-icon name="rocket-outline"></ion-icon>
+              </div>
+
+              <p>Web Performance</p>
+            </a>
+          </div>
+
+          <div class="tags">
+            <h2 class="h2">Tags</h2>
+
+            <div class="wrapper">
+              <button class="hashtag">#mongodb</button>
+              <button class="hashtag">#nodejs</button>
+              <button class="hashtag">#a11y</button>
+              <button class="hashtag">#mobility</button>
+              <button class="hashtag">#inclusion</button>
+              <button class="hashtag">#webperf</button>
+              <button class="hashtag">#optimize</button>
+              <button class="hashtag">#performance</button>
+            </div>
+          </div>
+
+          <div class="contact">
+            <h2 class="h2">Let's Talk</h2>
+
+            <div class="wrapper">
+              <p>
+                Do you want to learn more about how I can help your company
+                overcome problems? Let us have a conversation.
+              </p>
+
+              <ul class="social-link">
+                <li>
+                  <a href="#" class="icon-box discord">
+                    <ion-icon name="logo-discord"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box twitter">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#" class="icon-box facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="newsletter">
+            <h2 class="h2">newsletter</h2>
+
+            <div class="wrapper">
+              <p>
+                Subscribe to our newsletter to be among the first to keep up
+                with the latest updates.
+              </p>
+
+              <form>
+                <input type="email" name="email" placeholder="Email Address..." required />
+                <button type="submit" class="btn btn-primary">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- aside part end -->
+      </div>
+    </div>
+  </main>
+
+  <!-- hero section end -->
+
+  <!-- footer part start  -->
+
+  <footer>
+    <div class="container">
+      <div class="wrapper">
+        <a href="#" class="footer-logo">
+          <img src="images/logo-light.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-light" />
+          <img src="images/logo-dark.svg" alt="Devoloper-Rakib" width="150" height="60" class="logo-dark" />
+        </a>
+
+        <p class="footer-text">
+          Learn about Web accessibility, Web performance, and Database
+          management.
+        </p>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Advertise with us</a></li>
+
+          <li><a href="#" class="footer-link">About Us</a></li>
+
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <p class="footer-title">Legal Stuff</p>
+
+        <ul>
+          <li><a href="#" class="footer-link">Privacy Notice</a></li>
+
+          <li><a href="#" class="footer-link">Cookie Policy</a></li>
+
+          <li><a href="#" class="footer-link">Terms of User</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="copyright">
+      &copy; copyright 2022
+      <a href="https://www.facebook.com/rakibhasansohag133">Devoloper-Rakib</a>
+    </p>
+  </footer>
+
+  <!-- footer part end -->
+
+  <!-- javascript part start  -->
+  <script src="index.js"></script>
+
+  <!--- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
