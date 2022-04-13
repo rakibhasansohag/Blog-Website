@@ -1196,7 +1196,7 @@ footer .wrapper {
 
 
 
-/* other css file start */
+/* other css file for dark mode start */
 
 .light-theme {
 	--background-primary: hsl(0, 0%, 100%);
@@ -2147,7 +2147,8 @@ footer .wrapper {
 
 
 
-/* other css file end */
+
+/* other css file for dark mode end */
 
 
 
