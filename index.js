@@ -52,3 +52,19 @@ const span = document.getElementsByClassName('close')[0];
 span.onclick = function () {
 	modal.style.display = 'none';
 };
+
+// click to top button
+
+const myButton = document.getElementById('topButton');
+
+window.onscroll = function () {
+	scrollFunction();
+};
+
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		myButton.style.display = 'block';
+	} else {
+		myButton.style.display = 'none';
+	}
+}

@@ -70,6 +70,11 @@
 
 
 /* reset all global site start  */
+body{
+	display: grid;
+	grid-template-columns: auto 0px;
+	position: relative;
+}
 
 *,
 *::after,
@@ -2298,3 +2303,31 @@ footer .wrapper {
 	}
   }
 /* modal part end  */
+
+
+/* Scroll Back To Top Button start  */
+
+.top{
+	width: 60px ;
+	height: 60px;
+	color: hsl(0, 0%, 100%);
+	background-color: #fed54c;
+	display: none;
+	position: sticky;
+	bottom: 70px;
+	left: 95%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 10px;
+	font-size: 35px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.top:hover{
+	background-color: hsl(203, 89%, 53%);
+}
+
+/* Scroll Back To Top Button end */
+ 
