@@ -2177,9 +2177,21 @@ footer .wrapper {
 
 .blog_post p{
 	font-size: var(--fs-3);
+
 }
 
-
+.dark-theme .blog_post p{
+	color: teal;
+}
+.dark-theme .dark-h2{
+	color: yellowgreen;
+}
+.dark-theme .blog_post h3{
+	color: greenyellow;
+}
+.dark-theme .blog_post ul li{
+	color: teal;
+}
 .blog_post ul li{
 	list-style-type: disc;
 	font-size: var(--fs-3);
