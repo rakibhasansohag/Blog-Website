@@ -68,3 +68,6 @@ function scrollFunction() {
 		myButton.style.display = 'none';
 	}
 }
+
+// year update by default
+document.getElementById('newYear').innerHTML = new Date().getFullYear();
