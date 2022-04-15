@@ -1252,7 +1252,7 @@ a {
 li {
 	list-style: none
 }
-
+ /* copy paste start from up start */
 button,
 img {
 	display: block
@@ -1271,7 +1271,7 @@ button {
 }
 
 html {
-	font-family: Inter, sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: var(--fs-base);
 	line-height: 1.8
 }
@@ -1821,6 +1821,9 @@ footer .wrapper {
 		margin: 0
 	}
 }
+
+ /* copy paste start from up end */
+
 
 @media (min-width:768px) {
 	.container {
