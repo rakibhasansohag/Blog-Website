@@ -74,6 +74,7 @@ body{
 	display: grid;
 	grid-template-columns: auto 0px;
 	position: relative;
+	user-select: none;
 }
 
 *,
@@ -132,7 +133,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-	width: 16px;
+	width: 10px;
 }
 
 .light-theme::-webkit-scrollbar-thumb {
@@ -675,6 +676,9 @@ footer .wrapper {
 /* responsive for larger than 650px screen start  */
 
 @media (min-width:650px) {
+
+
+
 
 	:root {
 		--fs-1: 2.25rem;
@@ -1281,7 +1285,7 @@ html {
 }
 
 ::-webkit-scrollbar {
-	width: 16px
+	width: 11px
 }
 
 ::-webkit-scrollbar-thumb {

@@ -34,11 +34,12 @@ for (let x = 0; x < themeBtn.length; x++) {
 	});
 }
 
-// second part fo javascript start
+// second part of javascript start
 
 const modal = document.getElementById('myModal');
 
 const img = document.getElementById('images_modal');
+// const img = document.getElementsByClassName('test-me');
 const modalImg = document.getElementById('img01');
 const captionText = document.getElementById('caption');
 img.onclick = function () {
@@ -47,6 +48,7 @@ img.onclick = function () {
 	captionText.innerHTML = this.alt;
 };
 
+// after clicking the close button display will be none
 const span = document.getElementsByClassName('close')[0];
 
 span.onclick = function () {
